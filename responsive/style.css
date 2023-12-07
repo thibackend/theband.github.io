@@ -1,0 +1,240 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.main {
+    width: 1200px;
+    min-height: 100vh;
+    max-width: 100%;
+    margin: 10px auto 360px;
+    background-color: #fff;
+    padding-bottom: 20px;
+}
+
+/* Nav ---------------- */
+
+.nav {}
+
+.nav__list {
+    display: fixed;
+    top: 0px;
+    display: flex;
+    padding-inline-start: 0px;
+    column-gap: 20px;
+    background: black;
+    padding: 5px;
+}
+
+.nav__item {
+    list-style-type: none;
+    font-size: 30px;
+    padding: 10px;
+    color: white;
+}
+
+.nav__item:hover {
+    background: white;
+    color: black;
+}
+
+.mobile__nav {
+    width: 50px;
+    height: 50px;
+    display: none;
+}
+
+/* Product */
+.main__product {
+    display: flex;
+    padding: 10px;
+}
+
+.main__product-img {
+    width: 40%;
+    padding-top: 40%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: 0 auto;
+}
+
+.main__product-info {
+    width: 60%;
+    padding: 10px;
+}
+
+/* Column layout */
+.column-layout {
+    margin-top: 36px;
+    padding: 12px 0;
+    background-color: #fff;
+    display: flex;
+}
+
+.column-layout__category {
+    width: 20%;
+    padding: 0 16px;
+
+}
+
+.column-layout__container {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.column-item {
+    width: 25%;
+    padding: 0 16px;
+}
+
+/* Feature layout */
+.feature-layout {
+    margin-top: 36px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.feature-item {
+    padding: 12px 16px;
+    margin-top: 16px;
+    flex-basis: 30%;
+}
+
+.feature-item:nth-child(1) {
+    background-color: rgb(192, 227, 222);
+}
+
+.feature-item:nth-child(2) {
+    background-color: rgb(227, 200, 192);
+}
+
+.feature-item:nth-child(3) {
+    background-color: rgb(226, 192, 227);
+}
+
+/* Mobile: width < 740px */
+/* @media only screen and (max-width: 46.1875em) {} */
+
+/* Tablet: width >= 740px and width < 1024px     (min-width: 46.25em) = 740px */
+
+@media only screen and (max-width: 63.9375em) {
+    .main__product {
+        flex-direction: column-reverse;
+    }
+
+    .main__product-info {
+        width: 100%;
+    }
+
+    .main__product-desc {
+        display: none;
+    }
+
+    .main__product-img {
+        width: 85%;
+        padding-top: 85%;
+    }
+}
+
+/* This is Smart watch 500 px */
+@media screen and (max-width:31.25em) {
+
+    .column-item {
+        width: calc(100%);
+    }
+
+    .column-layout__category {
+        display: none;
+    }
+
+    .column-layout__container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .column-item {
+        width: 100%;
+    }
+
+}
+
+/* This is mobile min-width:312px; max-width:739px */
+@media screen and (min-width:19.5em) and (max-width:46.1875em) {
+
+
+    .main__product-img {
+        width: 95%;
+        padding-top: 85%;
+    }
+
+    .column-layout__container {
+        width: 100%;
+    }
+
+    .column-layout__category {
+        display: none;
+    }
+
+    .column-item {
+        width: calc(100%/2);
+
+
+    }
+}
+
+/* This is Tablet min-width: 740px  max-width < 1023px*/
+@media screen and (min-width:46.25em) and (max-width:63.9375em) {
+
+    .column-item {
+        width: calc(100%/2);
+    }
+
+    .feature-layout {
+        width: 100%;
+        margin-top: 36px;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 20px;
+    }
+
+    .feature-item {
+        width: 50%;
+        flex-basis: 50%;
+    }
+    .nav__list{
+        display: none;
+    }
+    .mobile__nav{
+        display: block;
+    }
+
+}
+
+/* This is PC
+@media screen and (min-width:64em) {
+    .pc {
+        display: block;
+        color: green;
+    }
+
+} */
+
+
+
+@media screen and (min-width:46.25em) and (max-width:63.9375em) {
+    .pc {
+        display: block;
+        color: green;
+    }
+
+    .main {
+        /* background-color: green; */
+    }
+
+}
